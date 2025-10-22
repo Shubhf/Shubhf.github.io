@@ -5,6 +5,8 @@ AI Researcher | Vision-Language Models • Multimodal Learning • Interpretable
 📧 shubhgarg265@gmail.com | [LinkedIn](https://linkedin.com/in/shubh-garg-459079247) | [GitHub](https://github.com/Shubhf)
 
 ---
+<img src="1718234905495.jpeg" alt="Shubh Garg" width="200" style="border-radius: 50%; margin-top:10px;">
+---
 
 ### 🔍 About Me
 I'm a researcher focusing on **multimodal and interpretable AI** — combining computer vision, language, and reasoning for real-world impact.  
