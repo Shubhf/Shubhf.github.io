@@ -29,6 +29,6 @@ I've authored **10+ peer-reviewed papers** and hold **2 patents** on deep learni
 ---
 
 ### 📄 Quick Links
-- [Publications](publications.md)
+- [Publications](publocations.md)
 - [Projects](projects.md)
 - [Download CV](SHUBH_GARG_Most_updated.pdf)
