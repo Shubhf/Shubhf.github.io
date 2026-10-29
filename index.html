@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubh Garg</title>
+<meta name="description" content="Shubh Garg — Research Scholar at IAIRO. Evaluation reliability, clinical AI, neurosymbolic and embodied AI, AI safety.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --text:#1d1f23; --muted:#5b616b; --line:#e6e3dc;
+  --accent:#1f5f8b; --accent-soft:#e7f0f6; --good:#2f7a4b; --good-soft:#e6f3ea; --warn:#8a5a12; --warn-soft:#f6eedf;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417; --surface:#191c20; --text:#e7e9ec; --muted:#9aa1ab; --line:#2a2e34;
+    --accent:#7fb6dc; --accent-soft:#1c2a35; --good:#7fcf9c; --good-soft:#1a2b21; --warn:#e2b46a; --warn-soft:#2d2518;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417; --surface:#191c20; --text:#e7e9ec; --muted:#9aa1ab; --line:#2a2e34;
+  --accent:#7fb6dc; --accent-soft:#1c2a35; --good:#7fcf9c; --good-soft:#1a2b21; --warn:#e2b46a; --warn-soft:#2d2518;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:56px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav .brand{font-weight:700;color:var(--text);margin-right:auto}
+nav a.l{color:var(--muted);font-size:14px}
+nav a.l:hover{color:var(--text);text-decoration:none}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:8px;padding:4px 10px;cursor:pointer;font:inherit;font-size:13px}
+header{padding:64px 0 40px}
+.photo{width:128px;height:128px;border-radius:50%;object-fit:cover;border:3px solid var(--surface);box-shadow:0 0 0 1px var(--line);margin-bottom:18px;display:block}
+h1{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(36px,6vw,52px);line-height:1.1;margin:0 0 8px;font-weight:600}
+.role{font-size:18px;color:var(--muted);margin:0 0 18px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.tags li{background:var(--accent-soft);color:var(--accent);padding:3px 11px;border-radius:999px;font-size:13px;font-weight:500}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:7px 14px;border-radius:8px;font-size:14px;font-weight:500}
+.btn:hover{border-color:var(--accent);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-family:"Source Serif 4",Georgia,serif;font-size:26px;margin:0 0 20px;font-weight:600}
+h3{font-size:16px;margin:0;font-weight:600}
+p{margin:0 0 12px}
+.lead{font-size:17px;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.news{list-style:none;padding:0;margin:0}
+.news li{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.news li:last-child{border-bottom:0}
+.news .d{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{margin-bottom:4px}
+.card .venue{font-size:13px;color:var(--muted);margin-bottom:10px}
+.card p{font-size:14.5px;margin:0}
+.badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;margin:0 4px 4px 0}
+.b-acc{background:var(--good-soft);color:var(--good)}
+.b-rev{background:var(--warn-soft);color:var(--warn)}
+.b-pub{background:var(--accent-soft);color:var(--accent)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .when{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.tl .org{color:var(--muted);font-size:14px;margin-bottom:6px}
+.tl ul{margin:0;padding-left:18px;font-size:14.5px}
+.tl ul li{display:list-item;border:0;padding:2px 0}
+.pubs h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:22px 0 8px}
+.pubs h3:first-of-type{margin-top:0}
+.pubs ol{margin:0;padding-left:20px}
+.pubs ol li{margin:0 0 10px;font-size:14.5px}
+.pubs .t{font-weight:600}
+.me{text-decoration:underline;text-underline-offset:2px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.filters button{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.skills{display:grid;grid-template-columns:220px 1fr;gap:10px 18px;font-size:14.5px}
+.skills dt{font-weight:600}
+.skills dd{margin:0;color:var(--muted)}
+footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:640px){
+  header{padding:40px 0 28px}
+  .tl li{grid-template-columns:1fr;gap:4px}
+  .news li{grid-template-columns:1fr;gap:0}
+  .skills{grid-template-columns:1fr;gap:2px}
+  .skills dd{margin-bottom:10px}
+  nav a.l.hide-m{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#">Shubh Garg</a>
+  <a class="l" href="#research">Research</a>
+  <a class="l" href="#publications">Publications</a>
+  <a class="l" href="#experience">Experience</a>
+  <a class="l hide-m" href="#skills">Skills</a>
+  <a class="l" href="Shubh_Garg_CV.pdf">CV</a>
+  <button id="theme" aria-label="Toggle dark mode">◐</button>
+</div></nav>
+
+<main class="wrap">
+<header>
+  <img class="photo" src="photo.jpeg" alt="Shubh Garg" width="128" height="128">
+  <h1>Shubh Garg</h1>
+  <p class="role">Research Scholar, <a href="https://iairo.ai">IAIRO</a> (Indian AI Research Organisation), Gandhinagar · with Prof. Amit Sheth</p>
+  <ul class="tags">
+    <li>Evaluation Reliability</li><li>Clinical AI</li><li>Neurosymbolic &amp; Embodied AI</li><li>AI Safety</li>
+  </ul>
+  <div class="links">
+    <a class="btn primary" href="Shubh_Garg_CV.pdf">Download CV (PDF)</a>
+    <a class="btn" href="mailto:shubhgarg265@gmail.com">Email</a>
+    <a class="btn" href="https://scholar.google.com/citations?user=nCbzOzgAAAAJ&amp;hl=en">Google Scholar</a>
+    <a class="btn" href="https://github.com/Shubhf">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/sgarg3011/">LinkedIn</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">My core empirical finding is that <strong>evaluation protocol is a first-class variable in AI research</strong>: the same model, same layer and same attribute produce structurally different causal conclusions depending solely on how the dataset is constructed.</p>
+  <p class="lead">I pursue this question across four domains — clinical AI (federated retinal grading, strabismus quantification), remote sensing and disaster intelligence (multitemporal segmentation, hazard benchmarking), neurosymbolic and embodied AI (KG-grounded embodied QA agents, drug repurposing), and representation reliability (probe task sensitivity, CLIP concept stability).</p>
+  <p class="lead muted">B.E. in Electronics and Computer Engineering, Thapar Institute of Engineering and Technology (CGPA 8.67/10, 2026).</p>
+</section>
+
+<section id="news">
+  <h2>Highlights</h2>
+  <ul class="news">
+    <li><span class="d">2026</span><span><em>Answering Without Arriving: An Evidence Audit for Embodied Question Answering</em> accepted as a poster at the <strong>NeurIPS 2026 NeMo Workshop</strong> (avg. rating 7.0/10).</span></li>
+    <li><span class="d">2026</span><span><em>Do Embodied VLMs Actually Use Their Scene-Graph Memory?</em> accepted at the <strong>CoRL 2026 SISREN Workshop</strong>.</span></li>
+    <li><span class="d">Oct 2026</span><span>Preprint with Chen Shani: <a href="https://arxiv.org/abs/2610.13910"><em>When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors</em></a> (arXiv:2610.13910).</span></li>
+    <li><span class="d">Aug 2026</span><span>Joined <strong>IAIRO</strong>, Gandhinagar, as a Research Scholar.</span></li>
+    <li><span class="d">2026</span><span>Invited student speaker, Global Resilience Summit 2026 (UCCS) / HealersHarbor International Conference.</span></li>
+    <li><span class="d">2025</span><span><em>StrabNet-CQ</em> published in <strong>BMC Ophthalmology</strong>; two patents granted on strabismus detection and AI-assisted optical glass design.</span></li>
+  </ul>
+</section>
+
+<section id="research">
+  <h2>Selected research</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="badge b-acc">NeurIPS 2026 NeMo · Poster</span><span class="badge b-acc">CoRL 2026 SISREN</span>
+      <h3>NaviGraph: Embodied QA via Global Semantic Graph Grounding</h3>
+      <div class="venue">AIISC, University of South Carolina · 2025–present</div>
+      <p>Standard embodied QA agents reach 0% closed-loop navigation success, with a 29.6-point gap between oracle navigation (48.2% QA accuracy) and current agents (18.6%). Extended with knowledge-graph memory for long-horizon EQA.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-pub">arXiv preprint</span>
+      <h3>Concept Stability in Vision-Language Models</h3>
+      <div class="venue">With Chen Shani (Tel Aviv University) · 2026</div>
+      <p>500 perturbation triplets on CLIP ViT-B/32. After a spatial-relation flip the image encoder actively prefers the incorrect caption (p &lt; 0.0001); colour only enters the representation at layers 11–12.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">In preparation</span>
+      <h3>Probe Task Sensitivity as a Causal Reliability Diagnostic</h3>
+      <div class="venue">2025–2026</div>
+      <p>Label imbalance produces saturation artifacts across Qwen and Mistral for age, education, gender and emotion; balanced evaluation recovers model-specific causal geometry.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">Under review</span>
+      <h3>Federated Retinal Foundation Models</h3>
+      <div class="venue">First and sole author · 2025–2026</div>
+      <p>First benchmark of federated DR grading with a retinal foundation model across populations in Brazil, India and the UAE. FedAvg degrades QWK 0.835 → 0.586; post-aggregation personalised fine-tuning closes 90% of the gap without sharing data.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">Under review</span>
+      <h3>DAFSeg: Dual-Stream Adaptive Fusion for Disaster Segmentation</h3>
+      <div class="venue">BRIGHT benchmark · 2025–2026</div>
+      <p>63.17% mIoU, 93.85% OA and 56.40% Destroyed-class IoU on BRIGHT. A 14-event ablation shows adaptive selection is not distinguishable from fixed fusion — the evaluation was the finding.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">Under review</span>
+      <h3>CrisisMMD-Seg &amp; UniCrisisNet</h3>
+      <div class="venue">First author · 2025–2026</div>
+      <p>Pixel-level annotations for five hazard categories extending CrisisMMD — the first ground-level disaster segmentation benchmark with structured hazard labels. 88.1% severity accuracy; 51.9% mIoU with a Hazard Interaction Module.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">Under review</span>
+      <h3>Geometry Without Structure</h3>
+      <div class="venue">Biomedical LM embedding geometry · 2025–2026</div>
+      <p>Systematic characterisation of biomedical LM geometry against molecular similarity: cross-family cosine similarity of 0.02 on identical inputs; DDI F1 +14.2pp over frozen baselines.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">Under review</span>
+      <h3>TIDIER: Knowledge-Guided Text-to-Image Safety</h3>
+      <div class="venue">AIISC, USC · 2025–present</div>
+      <p>Training-free safety via a Semantic Safety Margin over a multimodal knowledge graph: ~65% fewer harmful outputs across four benchmarks with a +9–10% relative CLIP score gain.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-rev">Under review</span>
+      <h3>Intermediate DR Grading (ONCL + CMAW)</h3>
+      <div class="venue">With Dr. Sahil Thakur (Mediwhale / NUS)</div>
+      <p>Ordinal neighbour contrastive learning with confusion-matrix adaptive weighting over 21,803 fundus images from three device types; Severe NPDR F1 improved up to 15.7pp over cross-entropy.</p>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="pubs">
+  <h2>Publications &amp; patents</h2>
+  <div class="filters" role="group" aria-label="Filter publications">
+    <button data-f="all" aria-pressed="true">All</button>
+    <button data-f="preprint" aria-pressed="false">Preprint</button>
+    <button data-f="journal" aria-pressed="false">Journal</button>
+    <button data-f="conf" aria-pressed="false">Conference &amp; workshop</button>
+    <button data-f="review" aria-pressed="false">Under review</button>
+    <button data-f="patent" aria-pressed="false">Patents</button>
+  </div>
+
+  <div data-g="preprint">
+    <h3>Preprint</h3>
+    <ol>
+      <li><span class="me">Garg S</span>, Shani C. <span class="t">When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors.</span> <a href="https://arxiv.org/abs/2610.13910">arXiv:2610.13910</a>, Oct 2026.</li>
+    </ol>
+  </div>
+
+  <div data-g="journal">
+    <h3>Journal articles &amp; book chapters</h3>
+    <ol>
+      <li><span class="me">Garg S</span>, Sachdeva A, Veer Singh K, Jindal N, Kumar M, Singh M. <span class="t">Machine learning techniques for electric vehicles battery charging: a decade of revolutionary progress (2015–2025).</span> <em>Ionics</em>, Springer Nature, 2026, 1–22.</li>
+      <li><span class="me">Garg S</span>, Sunkarapalli A, Ghosh D, Kaur S, Sukhija J. <span class="t">StrabNet-CQ: an integrated deep learning framework for automated strabismus classification and quantification using ocular landmark detection.</span> <em>BMC Ophthalmology</em> 25(1):595, 2025.</li>
+      <li><span class="me">Garg S</span>, Parakh R, Khandelwal J, Dhasaratahan C, Jindal N. <span class="t">Deep Learning–Based Stratification of Iron Overload in Thalassemia Patients.</span> In <em>Artificial Intelligence for Predictive Healthcare</em>, Auerbach (Taylor &amp; Francis), 2026, 119–137.</li>
+    </ol>
+  </div>
+
+  <div data-g="conf">
+    <h3>Conference &amp; workshop papers</h3>
+    <ol>
+      <li><span class="me">Garg S</span>, Pandey D, Rawal N, Khandelwal V, Sheth A. <span class="t">Answering Without Arriving: An Evidence Audit for Embodied Question Answering.</span> NeurIPS 2026 Workshop on Neuro-Symbolic Embodied Intelligence (NeMo). <strong>Poster.</strong></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">Do Embodied VLMs Actually Use Their Scene-Graph Memory?</span> CoRL 2026 Workshop on Scene and Situation Representations for Embodied Navigation (SISREN).</li>
+      <li>Osho O, <span class="me">Garg S</span>, Chakraborty S, Das SK. <span class="t">PCIAFL: Personalized and Class Imbalance-Aware Federated Learning for Driver Behavior Classification.</span> ICDCN 2026, 128–132.</li>
+      <li>Kaler P, <span class="me">Garg S</span>, Jindal N. <span class="t">Beyond Peaks: Deep Temporal Models for Ocular Electrophysiology.</span> ICICC 2026, Springer, 132–140.</li>
+      <li><span class="me">Garg S</span>, Kaler P, Samiksha S, Jindal N. <span class="t">AttentiveHybridNet: A CNN-Transformer Architecture with Cross-Attention for Robust Brain Tumor Classification from MRI Scans.</span> IEEE AI Summit 2025, 874–879.</li>
+      <li><span class="me">Garg S</span>, Singh N, Kaler P, Jindal N. <span class="t">AutoML-Enhanced Smart Grid Energy Forecasting for IoT-Enabled Homes.</span> IEEE INSPECT 2025, 1–6.</li>
+      <li>Garg P, Gupta B, <span class="me">Garg S</span>, Jindal N, Mandia S, Singh K. <span class="t">A Scalable Ensemble Framework for Robust Image Steganography and Data Restoration Under Distortion Attacks.</span> IEEE INSPECT 2025, 1–6.</li>
+      <li><span class="me">Garg S</span>, Singh N, Jindal N, Singh M. <span class="t">SEFO-GB: Smart Energy Forecasting and Optimization for Green Buildings.</span> IEEE SEFET 2025, 1–7.</li>
+      <li>Gupta B, Arora M, <span class="me">Garg S</span>, Ghosh D. <span class="t">Enhancing Strabismus Diagnosis from Detection to Classification with Deep Learning.</span> IEEE AIMLA 2025, 1–6.</li>
+    </ol>
+  </div>
+
+  <div data-g="review">
+    <h3>Under review</h3>
+    <ol>
+      <li><span class="me">Garg S</span>, Pandey D, Khandelwal V, Rawal N, Sheth A. <span class="t">Room to Remember: Knowledge-Graph Memory for Long-Horizon Embodied Question Answering.</span></li>
+      <li>Kaippilly Mana RP, Pawar AP, Shyalika C, Garimella R, <span class="me">Garg S</span>, Sheth A. <span class="t">TIDIER: Text-to-Image Alignment via Knowledge-Guided Hate Detection, Interpretation, and Repair.</span></li>
+      <li><span class="me">Garg S</span>. <span class="t">Federated Retinal Foundation Models: Cross-Population DR Grading Benchmark.</span></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">Geometry Without Structure: Biomedical LM Embedding Geometry.</span></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">Intermediate DR Grading via ONCL+CMAW.</span></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">The Cognitive Capability Spectrum of AI in Medicine.</span></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">DAFSeg: Dual-Stream Adaptive Fusion for Multitemporal Disaster Segmentation.</span></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">UniCrisisNet: Multimodal Severity Estimation and Hazard Segmentation.</span></li>
+    </ol>
+  </div>
+
+  <div data-g="patent">
+    <h3>Patents</h3>
+    <ol>
+      <li><span class="t">A Method for Detection and Quantification of Strabismus Using Deep Learning Tools.</span> Patent No. 202511042181, 2025. <span class="badge b-acc">Granted</span></li>
+      <li><span class="t">A Novel AI-Assisted Framework for Smart Optical Glass Development.</span> Patent No. 202511051934, 2025. <span class="badge b-acc">Granted</span></li>
+      <li><span class="t">A Portable Histopathology Device, System and Method.</span> Application No. 202511127973. <span class="badge b-rev">Filed</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul class="tl">
+    <li><div class="when">Aug 2026 – present</div><div>
+      <h3>Research Scholar — Neurosymbolic AI and Drug Repurposing</h3>
+      <div class="org">IAIRO (Indian AI Research Organisation), Gandhinagar · Prof. Amit Sheth</div>
+      <ul><li>Extending a Hetionet KG-LLM drug repurposing pipeline to find novel compound–disease associations with mechanistic provenance (prior pipeline: 96% recall on known associations).</li>
+      <li>Embodied AI and knowledge-graph research combining formal KG representations with large LLMs for verifiable, grounded AI.</li></ul>
+    </div></li>
+    <li><div class="when">Mar 2026 – Jul 2026</div><div>
+      <h3>Research Intern — LLM Alignment, Embodied AI and Knowledge Graphs</h3>
+      <div class="org">AIISC, University of South Carolina · Prof. Amit Sheth</div>
+      <ul><li>Neurosymbolic KG-LLM pipeline on Hetionet: 96% recall on known compound–disease associations vs. a 30% ceiling in prior work.</li>
+      <li>KG-grounded embodied QA agent (AI2-THOR / ProcTHOR) with a global semantic graph and cross-attention between Qwen3-VL and graph embeddings.</li>
+      <li>Contributor to TIDIER, a training-free text-to-image safety framework.</li></ul>
+    </div></li>
+    <li><div class="when">Jan 2026 – present</div><div>
+      <h3>Research Intern — Clinical NLP and Algorithmic Fairness</h3>
+      <div class="org">Project ANA (Anorexia in Men Research Initiative)</div>
+      <ul><li>BERTopic pipeline to detect systematic gender bias in eating-disorder screening instruments, with clinician-facing reliability recommendations.</li></ul>
+    </div></li>
+    <li><div class="when">Feb 2024 – Jun 2026</div><div>
+      <h3>Undergraduate Research Assistant — Clinical AI and Medical Imaging</h3>
+      <div class="org">Thapar Institute · Dr. Debabrata Ghosh and Dr. Neeru Jindal</div>
+      <ul><li>StrabNet-CQ: strabismus classification and continuous prism-diopter quantification (Pearson r = 0.730 vs. clinical gold standard); published in BMC Ophthalmology, 2 patents granted.</li>
+      <li>AttentiveHybridNet for brain-tumour MRI classification (IEEE AI Summit 2025).</li>
+      <li>Thalassemia iron-overload stratification (AUC 0.83) with sub-second ARM inference for rural screening.</li></ul>
+    </div></li>
+    <li><div class="when">May 2025 – Jun 2025</div><div>
+      <h3>Research Intern — Federated Learning Under Distribution Shift</h3>
+      <div class="org">Ubisys Lab, IIT Jodhpur · Dr. Suchetana Chakraborty</div>
+      <ul><li>Personalised CNN-LSTM with temporal attention: +18% minority-class F1 under non-IID federated settings; 60% lower communication overhead via selective aggregation.</li></ul>
+    </div></li>
+    <li><div class="when">Jan 2025 – May 2025</div><div>
+      <h3>AI Research Intern — Probabilistic Forecasting and Optimization</h3>
+      <div class="org">Indian Institute of Management Udaipur · Dr. Sumit Kumar</div>
+      <ul><li>Bayesian state-space and Kalman-filter models with calibrated uncertainty under sparse, irregular observations.</li></ul>
+    </div></li>
+    <li><div class="when">Oct 2024 – Mar 2025</div><div>
+      <h3>Research Intern — Multimodal Robustness Evaluation</h3>
+      <div class="org">Samsung R&amp;D Institute (Samsung PRISM)</div>
+      <ul><li>Multimodal watermark detection at 91% accuracy under perturbation and compression shifts; quantised transformer inference for low-resource deployment.</li></ul>
+    </div></li>
+  </ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <ul class="tl">
+    <li><div class="when">Oct 2022 – Jun 2026</div><div>
+      <h3>B.E. in Electronics and Computer Engineering</h3>
+      <div class="org">Thapar Institute of Engineering and Technology, Patiala</div>
+      <ul><li>CGPA 8.67/10 · Merit Scholarship (Rs. 1,41,000)</li>
+      <li>Coursework: Deep Learning and Applications, Artificial Intelligence, Optimization Techniques, Numerical Analysis, Data Structures and Algorithms</li></ul>
+    </div></li>
+  </ul>
+</section>
+
+<section id="talks">
+  <h2>Talks &amp; honours</h2>
+  <ul class="news">
+    <li><span class="d">2026</span><span><strong>Invited student speaker</strong>, Global Resilience Summit 2026 (University of Colorado Colorado Springs) / HealersHarbor International Conference — decision-aware AI in healthcare: uncertainty, population-scale deployment and interpretability under distribution shift.</span></li>
+    <li><span class="d">2026</span><span>NeMo Workshop at NeurIPS 2026 — average review score 7.0/10.</span></li>
+    <li><span class="d">2022</span><span>Merit Scholarship, Thapar Institute — Rs. 1,41,000.</span></li>
+    <li><span class="d">—</span><span>Ranked 67th of 500+ teams, NKSr Hackathon.</span></li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Clinical &amp; healthcare AI</dt><dd>Medical imaging (Grad-CAM, UMAP, segmentation), clinical NLP (BERTopic, BioBERT/SciBERT), federated learning, ARM edge inference, fairness evaluation</dd>
+    <dt>Neurosymbolic &amp; embodied AI</dt><dd>KG construction (Hetionet, MMKG, semantic scene graphs), KG-LLM cross-attention, EQA agents (AI2-THOR/ProcTHOR), drug repurposing, FAISS, RAG</dd>
+    <dt>AI safety &amp; evaluation</dt><dd>Activation steering, linear probing, causal intervention, probe task design, counterfactual evaluation, distribution-shift analysis, hallucination detection</dd>
+    <dt>LLMs &amp; alignment</dt><dd>HuggingFace Transformers, LoRA/PEFT, constrained decoding, Qwen3-VL</dd>
+    <dt>Remote sensing &amp; disaster</dt><dd>Multitemporal segmentation, change detection, BRIGHT, CrisisMMD, DeepLabV3, SegFormer</dd>
+    <dt>Multimodal &amp; vision</dt><dd>CLIP, ViT, multimodal fusion, contrastive learning, text-to-image safety</dd>
+    <dt>Systems</dt><dd>PyTorch, TensorFlow, scikit-learn, FastAPI, Docker, AWS/GCP, Weights &amp; Biases, exo distributed inference (contributor)</dd>
+    <dt>Languages</dt><dd>Python, C++, SQL, LaTeX</dd>
+  </dl>
+</section>
+</main>
+
+<footer><div class="wrap">
+  © 2026 Shubh Garg · <a href="mailto:shubhgarg265@gmail.com">shubhgarg265@gmail.com</a> · Last updated October 2026
+</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  var btns=document.querySelectorAll('.filters button'), groups=document.querySelectorAll('[data-g]');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    var f=b.dataset.f;
+    groups.forEach(function(g){g.style.display=(f==='all'||g.dataset.g===f)?'':'none'});
+  })});
+})();
+</script>
+</body>
+</html>
