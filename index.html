@@ -133,8 +133,10 @@ footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
 <section id="news">
   <h2>Highlights</h2>
   <ul class="news">
-    <li><span class="d">2026</span><span><em>Answering Without Arriving: An Evidence Audit for Embodied Question Answering</em> accepted as a poster at the <strong>NeurIPS 2026 NeMo Workshop</strong> (avg. rating 7.0/10).</span></li>
-    <li><span class="d">2026</span><span><em>Do Embodied VLMs Actually Use Their Scene-Graph Memory?</em> accepted at the <strong>CoRL 2026 SISREN Workshop</strong>.</span></li>
+    <li><span class="d">Nov 2026</span><span><a href="https://arxiv.org/abs/2611.32022"><em>Beyond Before-and-After Images: Evaluating Temporal Grounding in a Lightweight VLM for Disaster Assessment</em></a> accepted at the <strong>WACV 2027 CV4EO Workshop</strong>; now on arXiv (2611.32022).</span></li>
+    <li><span class="d">2026</span><span><em>How Well Do Vision-Language Scene Graphs Serve as Memory for Embodied Question Answering?</em> accepted as a poster at the <strong>WACV 2027 HOUR Workshop</strong>.</span></li>
+    <li><span class="d">2026</span><span><a href="https://arxiv.org/abs/2611.01958"><em>Answering Without Arriving: An Evidence Audit for Embodied Question Answering</em></a> accepted as a poster at the <strong>NeurIPS 2026 NeMo Workshop</strong> (avg. rating 7.0/10).</span></li>
+    <li><span class="d">2026</span><span><a href="https://arxiv.org/abs/2611.02056"><em>Do Embodied VLMs Actually Use Their Scene-Graph Memory?</em></a> accepted at the <strong>CoRL 2026 SISREN Workshop</strong>.</span></li>
     <li><span class="d">Oct 2026</span><span>Preprint with Chen Shani: <a href="https://arxiv.org/abs/2610.13910"><em>When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors</em></a> (arXiv:2610.13910).</span></li>
     <li><span class="d">Aug 2026</span><span>Joined <strong>IAIRO</strong>, Gandhinagar, as a Research Scholar.</span></li>
     <li><span class="d">2026</span><span>Invited student speaker, Global Resilience Summit 2026 (UCCS) / HealersHarbor International Conference.</span></li>
@@ -146,10 +148,16 @@ footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
   <h2>Selected research</h2>
   <div class="grid">
     <div class="card">
-      <span class="badge b-acc">NeurIPS 2026 NeMo · Poster</span><span class="badge b-acc">CoRL 2026 SISREN</span>
+      <span class="badge b-acc">NeurIPS 2026 NeMo · Poster</span><span class="badge b-acc">CoRL 2026 SISREN</span><span class="badge b-acc">WACV 2027 HOUR · Poster</span>
       <h3>NaviGraph: Embodied QA via Global Semantic Graph Grounding</h3>
       <div class="venue">AIISC, University of South Carolina · 2025–present</div>
-      <p>Standard embodied QA agents reach 0% closed-loop navigation success, with a 29.6-point gap between oracle navigation (48.2% QA accuracy) and current agents (18.6%). Extended with knowledge-graph memory for long-horizon EQA.</p>
+      <p>Standard embodied QA agents reach 0% closed-loop navigation success, with a 29.6-point gap between oracle navigation (48.2% QA accuracy) and current agents (18.6%). Follow-up work asks whether vision-language scene graphs serve as usable memory and extends this to knowledge-graph memory for long-horizon EQA.</p>
+    </div>
+    <div class="card">
+      <span class="badge b-acc">WACV 2027 CV4EO</span><span class="badge b-pub">arXiv</span>
+      <h3><a href="https://arxiv.org/abs/2611.32022">Temporal Grounding in Lightweight VLMs for Disaster Assessment</a></h3>
+      <div class="venue">With Pratham Arora and Dr. Debabrata Ghosh · 2026</div>
+      <p>A controlled test of whether a VLM uses the pre-event image (InternVL3-2B on DisasterM3, 9,031 questions, 41 events). The true pre/post pair is only +0.5 points over repeating the post image (CI includes zero), and reversing the order barely matters.</p>
     </div>
     <div class="card">
       <span class="badge b-pub">arXiv preprint</span>
@@ -232,8 +240,10 @@ footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
   <div data-g="conf">
     <h3>Conference &amp; workshop papers</h3>
     <ol>
-      <li><span class="me">Garg S</span>, Pandey D, Rawal N, Khandelwal V, Sheth A. <span class="t">Answering Without Arriving: An Evidence Audit for Embodied Question Answering.</span> NeurIPS 2026 Workshop on Neuro-Symbolic Embodied Intelligence (NeMo). <strong>Poster.</strong></li>
-      <li><span class="me">Garg S</span> et al. <span class="t">Do Embodied VLMs Actually Use Their Scene-Graph Memory?</span> CoRL 2026 Workshop on Scene and Situation Representations for Embodied Navigation (SISREN).</li>
+      <li><span class="me">Garg S</span>, Pandey D, Rawal N, Khandelwal V, Sheth A. <span class="t">Answering Without Arriving: An Evidence Audit for Embodied Question Answering.</span> NeurIPS 2026 Workshop on Neuro-Symbolic Embodied Intelligence (NeMo). <strong>Poster.</strong> <a href="https://arxiv.org/abs/2611.01958">arXiv:2611.01958</a></li>
+      <li><span class="me">Garg S</span> et al. <span class="t">Do Embodied VLMs Actually Use Their Scene-Graph Memory?</span> CoRL 2026 Workshop on Scene and Situation Representations for Embodied Navigation (SISREN). <a href="https://arxiv.org/abs/2611.02056">arXiv:2611.02056</a></li>
+      <li>Pandey D, <span class="me">Garg S</span>, Khandelwal V, Rawal N, Sheth A. <span class="t">How Well Do Vision-Language Scene Graphs Serve as Memory for Embodied Question Answering?</span> WACV 2027 Workshop on Human-Centric Open-World Understanding and Reasoning (HOUR). <strong>Poster.</strong></li>
+      <li><span class="me">Garg S</span>, Arora P, Ghosh D. <span class="t">Beyond Before-and-After Images: Evaluating Temporal Grounding in a Lightweight VLM for Disaster Assessment.</span> WACV 2027 Workshop on Computer Vision for Earth Observation Applications (CV4EO). <a href="https://arxiv.org/abs/2611.32022">arXiv:2611.32022</a></li>
       <li>Osho O, <span class="me">Garg S</span>, Chakraborty S, Das SK. <span class="t">PCIAFL: Personalized and Class Imbalance-Aware Federated Learning for Driver Behavior Classification.</span> ICDCN 2026, 128–132.</li>
       <li>Kaler P, <span class="me">Garg S</span>, Jindal N. <span class="t">Beyond Peaks: Deep Temporal Models for Ocular Electrophysiology.</span> ICICC 2026, Springer, 132–140.</li>
       <li><span class="me">Garg S</span>, Kaler P, Samiksha S, Jindal N. <span class="t">AttentiveHybridNet: A CNN-Transformer Architecture with Cross-Attention for Robust Brain Tumor Classification from MRI Scans.</span> IEEE AI Summit 2025, 874–879.</li>
@@ -249,6 +259,9 @@ footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
     <ol>
       <li><span class="me">Garg S</span>, Pandey D, Khandelwal V, Rawal N, Sheth A. <span class="t">Room to Remember: Knowledge-Graph Memory for Long-Horizon Embodied Question Answering.</span></li>
       <li>Kaippilly Mana RP, Pawar AP, Shyalika C, Garimella R, <span class="me">Garg S</span>, Sheth A. <span class="t">TIDIER: Text-to-Image Alignment via Knowledge-Guided Hate Detection, Interpretation, and Repair.</span></li>
+      <li><span class="me">Garg S</span>, Pandey D, Khandelwal V, Sheth A. <span class="t">Is It What the Robot Sees or What It Keeps? Disentangling Perception and Policy in Scene-Graph Memory.</span></li>
+      <li><span class="me">Garg S</span>, Wanaskar K, Chadha A, Jain V, Jena G, Sheth A. <span class="t">Similar Representations, Different Decisions: Layer Similarity Does Not Locate Where Language and Vision-Language Models Form Their Answers.</span></li>
+      <li>Das A, <span class="me">Garg S</span>, Verma VK. <span class="t">SROOM: Self-Referenced Orthogonal Oriented Matryoshka.</span></li>
       <li><span class="me">Garg S</span>. <span class="t">Federated Retinal Foundation Models: Cross-Population DR Grading Benchmark.</span></li>
       <li><span class="me">Garg S</span> et al. <span class="t">Geometry Without Structure: Biomedical LM Embedding Geometry.</span></li>
       <li><span class="me">Garg S</span> et al. <span class="t">Intermediate DR Grading via ONCL+CMAW.</span></li>
@@ -331,6 +344,7 @@ footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
   <ul class="news">
     <li><span class="d">2026</span><span><strong>Invited student speaker</strong>, Global Resilience Summit 2026 (University of Colorado Colorado Springs) / HealersHarbor International Conference — decision-aware AI in healthcare: uncertainty, population-scale deployment and interpretability under distribution shift.</span></li>
     <li><span class="d">2026</span><span>NeMo Workshop at NeurIPS 2026 — average review score 7.0/10.</span></li>
+    <li><span class="d">2026</span><span>HOUR Workshop at WACV 2027 — average review score 6.33/10.</span></li>
     <li><span class="d">2022</span><span>Merit Scholarship, Thapar Institute — Rs. 1,41,000.</span></li>
     <li><span class="d">—</span><span>Ranked 67th of 500+ teams, NKSr Hackathon.</span></li>
   </ul>
@@ -352,7 +366,7 @@ footer{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);f
 </main>
 
 <footer><div class="wrap">
-  © 2026 Shubh Garg · <a href="mailto:shubhgarg265@gmail.com">shubhgarg265@gmail.com</a> · Last updated October 2026
+  © 2026 Shubh Garg · <a href="mailto:shubhgarg265@gmail.com">shubhgarg265@gmail.com</a> · Last updated November 2026
 </div></footer>
 
 <script>
